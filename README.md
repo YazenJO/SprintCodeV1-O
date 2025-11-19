@@ -163,6 +163,4 @@ This project is licensed under the MIT License.
 
 If you encounter any issues, please check the [GOOGLE_DRIVE_SETUP.md](./GOOGLE_DRIVE_SETUP.md) guide or open an issue on GitHub.
 
----
 
-Made with ❤️ using Google Gemini AI
