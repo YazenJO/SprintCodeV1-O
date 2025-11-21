@@ -262,239 +262,238 @@
             <div style="margin: 40px 0;">
                 <p class="date" style="font-size: 28px;">🏆 AI Hackathon 2025 | Built in 4 Hours</p>
             </div>
-            <div style="text-align: center; margin-top: 50px;">
-                <p style="font-size: 24px; color: #8b949e;">Solving a Real $50K+ University Problem</p>
-            </div>
+          
             <div class="slide-number">1 / 7</div>
         </div>
 
-        <!-- Slide 2: The Challenge -->
+        <!-- Slide 2: The Problem -->
         <div class="slide" data-slide="2">
             <div class="gradient-border"></div>
-            <h2 style="color: #00ff88;">📋 The Challenge We Were Given</h2>
-            <h3 style="font-size: 38px;">Build an AI-Powered Test Bank Generator in 4 Hours</h3>
+            <h2 style="color: #00ff88;">🎯 The Real-World Problem</h2>
+            <h3 style="font-size: 38px;">Universities Face a Critical Challenge</h3>
             
-            <div class="box" style="border-left: 6px solid #00d9ff;">
-                <h4 style="color: #00d9ff; font-size: 28px; margin-bottom: 20px;">🎯 Required Features:</h4>
-                <div class="two-column" style="gap: 30px;">
-                    <div>
-                        <ul style="font-size: 22px;">
-                            <li>📤 Upload PDF/image test banks</li>
-                            <li>🤖 AI extracts questions automatically</li>
-                            <li>📝 Interactive exam interface</li>
-                            <li>✅ Auto-grading system</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <ul style="font-size: 22px;">
-                            <li>📊 Results with correct answers</li>
-                            <li>💻 Modern, responsive UI</li>
-                            <li>⚡ Fast processing (under 60s)</li>
-                            <li>🎨 Professional design</li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="box" style="border-left: 6px solid #ff6b6b;">
+                <h4 style="color: #ff6b6b; font-size: 28px; margin-bottom: 20px;">😓 Current Situation:</h4>
+                <ul style="font-size: 22px;">
+                    <li>Professors manually create exams from test banks (PDFs/images)</li>
+                    <li>Copy-pasting questions takes <span class="warning">2-3 hours per exam</span></li>
+                    <li>Grading 100+ students takes another <span class="warning">5-10 hours</span></li>
+                    <li>Multiple exams per semester = <span class="warning">200+ hours wasted</span></li>
+                    <li>Students want instant practice and feedback</li>
+                </ul>
             </div>
 
-            <div style="text-align: center; background: rgba(127,90,240,0.2); padding: 25px; border-radius: 12px; border: 2px solid #7f5af0; margin-top: 30px;">
-                <p style="font-size: 28px;"><span class="highlight">Our Mission:</span> Build a production-ready solution that saves universities <span class="info">200+ hours</span> per semester</p>
+            <div class="box" style="border-left: 6px solid #00ff88;">
+                <h4 style="color: #00ff88; font-size: 28px; margin-bottom: 20px;">� The Vision:</h4>
+                <p style="font-size: 24px; line-height: 1.8;">
+                    Imagine uploading a test bank document and within <span class="highlight">60 seconds</span>, students have a fully interactive, 
+                    self-grading exam. No manual work. No delays. Just <span class="info">smart automation powered by AI</span>.
+                </p>
+            </div>
+
+            <div style="text-align: center; background: rgba(0,255,136,0.2); padding: 25px; border-radius: 12px; border: 2px solid #00ff88; margin-top: 30px;">
+                <p style="font-size: 32px;"><span class="highlight">Your Mission:</span> Build the solution that revolutionizes education 🚀</p>
             </div>
             
             <div class="slide-number">2 / 7</div>
         </div>
 
-        <!-- Slide 3: Technical Execution (35 pts) -->
+        <!-- Slide 3: How It Should Work -->
         <div class="slide" data-slide="3">
             <div class="gradient-border"></div>
-            <h2 style="color: #00ff88;">⚙️ Technical Execution & AI Integration</h2>
-            <h3 style="font-size: 28px; color: #8b949e;">Evaluation Criteria #1: 35/35 Points ✅</h3>
+            <h2 style="color: #00d9ff;">🔄 The Complete User Journey</h2>
+            <h3 style="font-size: 32px; color: #8b949e;">From Upload to Results in Under 60 Seconds</h3>
             
-            <div class="box" style="border-left: 6px solid #00ff88;">
-                <h4 style="color: #00ff88; font-size: 26px; margin-bottom: 15px;">✅ Code Quality & Architecture (12/12 pts)</h4>
-                <ul style="font-size: 19px;">
-                    <li>Clean, modular React components with TypeScript</li>
-                    <li>Proper separation: API layer, components, hooks, utilities</li>
-                    <li>Comprehensive error handling with try-catch blocks</li>
-                    <li>Type-safe interfaces and proper validation</li>
-                </ul>
+            <div class="flow-step">
+                <h4 style="color: #00ff88; font-size: 26px; margin-bottom: 10px;">Step 1️⃣: Upload Test Bank</h4>
+                <p style="font-size: 20px; color: #c9d1d9;">
+                    User uploads a PDF or image containing test bank questions. The system should accept multiple formats 
+                    and provide instant feedback if the file is invalid.
+                </p>
             </div>
 
-            <div class="box" style="border-left: 6px solid #00d9ff;">
-                <h4 style="color: #00d9ff; font-size: 26px; margin-bottom: 15px;">🤖 AI/ML Integration (15/15 pts)</h4>
-                <ul style="font-size: 19px;">
-                    <li><span class="info">Gemini 2.0 Flash</span> with advanced prompt engineering</li>
-                    <li>File-to-base64 conversion for PDF/image processing</li>
-                    <li>Computer vision + NLP for accurate extraction (95%+)</li>
-                    <li>Smart JSON parsing with markdown cleanup</li>
-                </ul>
+            <div class="flow-step">
+                <h4 style="color: #00d9ff; font-size: 26px; margin-bottom: 10px;">Step 2️⃣: AI Extracts Questions</h4>
+                <p style="font-size: 20px; color: #c9d1d9;">
+                    Behind the scenes, AI analyzes the document, identifies questions and answers, and structures them 
+                    into a format ready for an interactive exam. This magic happens automatically!
+                </p>
             </div>
 
-            <div class="box" style="border-left: 6px solid #7f5af0;">
-                <h4 style="color: #7f5af0; font-size: 26px; margin-bottom: 15px;">✨ Implementation Completeness (8/8 pts)</h4>
-                <ul style="font-size: 19px;">
-                    <li>All core features working: upload → AI → exam → results</li>
-                    <li>Zero crashes, handles edge cases gracefully</li>
-                    <li>Production-ready code in 4 hours!</li>
-                </ul>
+            <div class="flow-step">
+                <h4 style="color: #7f5af0; font-size: 26px; margin-bottom: 10px;">Step 3️⃣: Take Interactive Exam</h4>
+                <p style="font-size: 20px; color: #c9d1d9;">
+                    Students see a clean interface with questions they can answer. Track progress, navigate between questions, 
+                    and submit when ready.
+                </p>
+            </div>
+
+            <div class="flow-step">
+                <h4 style="color: #ffa500; font-size: 26px; margin-bottom: 10px;">Step 4️⃣: Instant Results & Review</h4>
+                <p style="font-size: 20px; color: #c9d1d9;">
+                    Immediately see the score, which questions were correct/incorrect, and review all answers. 
+                    Learning happens in real-time!
+                </p>
             </div>
 
             <div class="slide-number">3 / 7</div>
         </div>
 
-        <!-- Slide 4: Functionality & Demo (35 pts) -->
+        <!-- Slide 4: Core Features to Build -->
         <div class="slide" data-slide="4">
             <div class="gradient-border"></div>
-            <h2 style="color: #00d9ff;">🚀 Functionality & Demo Quality</h2>
-            <h3 style="font-size: 28px; color: #8b949e;">Evaluation Criteria #2: 35/35 Points ✅</h3>
+            <h2 style="color: #00ff88;">�️ What You Need to Build</h2>
+            <h3 style="font-size: 32px; color: #8b949e;">Essential Features of Your Solution</h3>
             
             <div class="box" style="border-left: 6px solid #00ff88;">
-                <h4 style="color: #00ff88; font-size: 26px; margin-bottom: 15px;">✅ Core Features Working (15/15 pts)</h4>
-                <div class="two-column">
-                    <ul style="font-size: 18px;">
-                        <li>File upload (PDF/PNG/JPG) - <span class="highlight">WORKS</span></li>
-                        <li>AI extraction 95%+ accuracy - <span class="highlight">WORKS</span></li>
-                        <li>Interactive exam interface - <span class="highlight">WORKS</span></li>
-                    </ul>
-                    <ul style="font-size: 18px;">
-                        <li>Auto-grading calculates perfectly - <span class="highlight">WORKS</span></li>
-                        <li>Results show correct/incorrect - <span class="highlight">WORKS</span></li>
-                        <li>Handles multi-page docs - <span class="highlight">WORKS</span></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="box" style="border-left: 6px solid #00d9ff;">
-                <h4 style="color: #00d9ff; font-size: 26px; margin-bottom: 15px;">🎤 Demo & Presentation (12/12 pts)</h4>
-                <ul style="font-size: 18px;">
-                    <li>Live demo ready - localhost running now!</li>
-                    <li>Clear demonstration of full workflow (30-60 sec)</li>
-                    <li>Professional presentation with cyberpunk theme</li>
+                <h4 style="color: #00ff88; font-size: 28px; margin-bottom: 15px;">📤 File Upload System</h4>
+                <p style="font-size: 20px; color: #c9d1d9; margin-bottom: 10px;">
+                    Create a user-friendly way to upload test bank documents (PDF, PNG, JPG). Think about:
+                </p>
+                <ul style="font-size: 19px;">
+                    <li>Drag & drop or click to upload</li>
+                    <li>File validation (size, type)</li>
+                    <li>Visual feedback during upload</li>
+                    <li>Preview of uploaded file</li>
                 </ul>
             </div>
 
-            <div class="box" style="border-left: 6px solid #7f5af0;">
-                <h4 style="color: #7f5af0; font-size: 26px; margin-bottom: 15px;">⚡ Reliability & Performance (8/8 pts)</h4>
-                <ul style="font-size: 18px;">
-                    <li>Zero crashes - rock solid stability</li>
-                    <li>Processing: 5-60 seconds (excellent!)</li>
-                    <li>Clear error messages with user feedback</li>
+            <div class="box" style="border-left: 6px solid #00d9ff;">
+                <h4 style="color: #00d9ff; font-size: 28px; margin-bottom: 15px;">🤖 AI-Powered Extraction</h4>
+                <p style="font-size: 20px; color: #c9d1d9; margin-bottom: 10px;">
+                    Integrate an AI model to read and understand the document. Your AI should:
+                </p>
+                <ul style="font-size: 19px;">
+                    <li>Extract questions from various formats</li>
+                    <li>Identify answer choices (A, B, C, D)</li>
+                    <li>Determine the correct answer</li>
+                    <li>Handle different question styles</li>
                 </ul>
             </div>
 
             <div class="slide-number">4 / 7</div>
         </div>
 
-        <!-- Slide 5: UI/UX Design (20 pts) -->
+        <!-- Slide 5: Interactive Exam & Results -->
         <div class="slide" data-slide="5">
             <div class="gradient-border"></div>
-            <h2 style="color: #7f5af0;">🎨 User Interface & Experience</h2>
-            <h3 style="font-size: 28px; color: #8b949e;">Evaluation Criteria #3: 20/20 Points ✅</h3>
+            <h2 style="color: #7f5af0;">📝 Interactive Experience</h2>
+            <h3 style="font-size: 32px; color: #8b949e;">Making Exams Engaging & Informative</h3>
             
-            <div class="box" style="border-left: 6px solid #00ff88;">
-                <h4 style="color: #00ff88; font-size: 26px; margin-bottom: 15px;">✨ Visual Design (8/8 pts)</h4>
-                <ul style="font-size: 19px;">
-                    <li>Professional cyberpunk theme - consistent throughout</li>
-                    <li>Custom colors: #7f5af0, #00ff88, #00d9ff</li>
-                    <li>JetBrains Mono + Space Grotesk fonts</li>
-                    <li>Clear visual hierarchy with gradients</li>
-                </ul>
-            </div>
-
-            <div class="box" style="border-left: 6px solid #00d9ff;">
-                <h4 style="color: #00d9ff; font-size: 26px; margin-bottom: 15px;">👤 User Experience (8/8 pts)</h4>
-                <ul style="font-size: 19px;">
-                    <li>Intuitive flow: Upload → Exam → Results</li>
-                    <li>Terminal-style with clear instructions</li>
-                    <li>Responsive design (desktop/tablet/mobile)</li>
-                </ul>
-            </div>
-
             <div class="box" style="border-left: 6px solid #7f5af0;">
-                <h4 style="color: #7f5af0; font-size: 26px; margin-bottom: 15px;">💫 Polish & Details (4/4 pts)</h4>
+                <h4 style="color: #7f5af0; font-size: 28px; margin-bottom: 15px;">📝 Exam Interface</h4>
+                <p style="font-size: 20px; color: #c9d1d9; margin-bottom: 10px;">
+                    Design an interface where students can actually take the exam:
+                </p>
                 <ul style="font-size: 19px;">
-                    <li>Loading spinners with feedback</li>
-                    <li>Smooth transitions and hover effects</li>
-                    <li>Professional touches: logo, status, progress bars</li>
+                    <li>Display one question at a time (or all at once)</li>
+                    <li>Clear answer selection with multiple choice buttons</li>
+                    <li>Progress indicator (e.g., "Question 5 of 20")</li>
+                    <li>Navigation between questions</li>
+                    <li>Submit button when complete</li>
+                </ul>
+            </div>
+
+            <div class="box" style="border-left: 6px solid #00ff88;">
+                <h4 style="color: #00ff88; font-size: 28px; margin-bottom: 15px;">✅ Auto-Grading & Results</h4>
+                <p style="font-size: 20px; color: #c9d1d9; margin-bottom: 10px;">
+                    Instantly grade and show results:
+                </p>
+                <ul style="font-size: 19px;">
+                    <li>Calculate score automatically</li>
+                    <li>Show percentage and grade</li>
+                    <li>Display which answers were correct/incorrect</li>
+                    <li>Allow review of all questions with correct answers</li>
                 </ul>
             </div>
 
             <div class="slide-number">5 / 7</div>
         </div>
 
-        <!-- Slide 6: Bonus Features (10 pts) -->
+        <!-- Slide 6: Design & User Experience -->
         <div class="slide" data-slide="6">
             <div class="gradient-border"></div>
-            <h2 style="color: #ffa500;">✨ Bonus Features & Creativity</h2>
-            <h3 style="font-size: 28px; color: #8b949e;">Evaluation Criteria #4: 10/10 Points ✅</h3>
+            <h2 style="color: #00d9ff;">🎨 Design Matters!</h2>
+            <h3 style="font-size: 32px; color: #8b949e;">Create an Experience Students Will Love</h3>
             
-            <div class="box" style="border-left: 6px solid #ffa500;">
-                <h4 style="color: #ffa500; font-size: 26px; margin-bottom: 15px;">🎁 Extra Features (6/6 pts)</h4>
-                <ul style="font-size: 19px;">
-                    <li><span class="highlight">Image Preview:</span> Live preview with remove button</li>
-                    <li><span class="highlight">Progress Tracking:</span> Real-time question counter (3/15)</li>
-                    <li><span class="highlight">Multi-Format:</span> PDF, PNG, JPG, GIF, WebP</li>
-                    <li><span class="highlight">Detailed Results:</span> Shows all answers side-by-side</li>
-                    <li><span class="highlight">Smart Validation:</span> Size/type checks with helpful errors</li>
+            <div class="box" style="border-left: 6px solid #00d9ff;">
+                <h4 style="color: #00d9ff; font-size: 28px; margin-bottom: 15px;">💡 Make It Beautiful</h4>
+                <ul style="font-size: 20px;">
+                    <li>Choose a cohesive color scheme and stick to it</li>
+                    <li>Use consistent fonts and spacing</li>
+                    <li>Make buttons and clickable elements obvious</li>
+                    <li>Add your personal creative touch!</li>
+                    <li>Consider dark mode or unique themes</li>
+                </ul>
+            </div>
+
+            <div class="box" style="border-left: 6px solid #7f5af0;">
+                <h4 style="color: #7f5af0; font-size: 28px; margin-bottom: 15px;">⚡ Make It Fast & Smooth</h4>
+                <ul style="font-size: 20px;">
+                    <li>Show loading indicators during AI processing</li>
+                    <li>Provide clear error messages if something fails</li>
+                    <li>Make the interface responsive (works on mobile)</li>
+                    <li>Add smooth transitions and animations</li>
                 </ul>
             </div>
 
             <div class="box" style="border-left: 6px solid #ffa500;">
-                <h4 style="color: #ffa500; font-size: 26px; margin-bottom: 15px;">💎 Implementation Quality (4/4 pts)</h4>
-                <ul style="font-size: 19px;">
-                    <li><span class="info">Terminal Aesthetic:</span> Unique cyberpunk with colored dots</li>
-                    <li><span class="info">Logo Integration:</span> Custom badge with gradient glow</li>
-                    <li><span class="info">Micro-interactions:</span> Hover effects, animations, shadows</li>
-                    <li><span class="info">Edge Cases:</span> Empty files, wrong formats - all handled!</li>
-                </ul>
-            </div>
-
-            <div style="text-align: center; background: rgba(255,165,0,0.2); padding: 25px; border-radius: 12px; border: 2px solid #ffa500; margin-top: 20px;">
-                <p style="font-size: 28px;"><span style="color: #ffa500; font-weight: 700;">We went beyond the requirements! 🚀</span></p>
+                <h4 style="color: #ffa500; font-size: 28px; margin-bottom: 15px;">🚀 Go Beyond!</h4>
+                <p style="font-size: 20px; color: #c9d1d9;">
+                    Think of extra features: Timer? Study mode? Export results? Multiple file uploads? 
+                    <span class="highlight">Creativity wins!</span>
+                </p>
             </div>
 
             <div class="slide-number">6 / 7</div>
         </div>
 
-        <!-- Slide 7: Final Score & Demo -->
+        <!-- Slide 7: Your Challenge Awaits -->
         <div class="slide" data-slide="7">
             <div class="gradient-border"></div>
-            <h2 style="font-size: 56px;">🏆 Final Evaluation</h2>
+            <h2 style="font-size: 56px;">🚀 Your Challenge Awaits!</h2>
             
+            <div style="background: linear-gradient(135deg, #161b22, #1c2128); border: 3px solid #7f5af0; border-radius: 20px; padding: 40px; margin: 40px 0;">
+                <h3 style="font-size: 42px; color: #00ff88; text-align: center; margin-bottom: 30px;">
+                    Build Something That Matters
+                </h3>
+                <p style="font-size: 24px; color: #c9d1d9; text-align: center; line-height: 1.8; margin-bottom: 30px;">
+                    You have <span class="highlight">4 hours</span> to create a solution that could save universities 
+                    <span class="info">hundreds of hours</span> and help <span class="info">thousands of students</span> 
+                    learn more effectively.
+                </p>
+                <p style="font-size: 24px; color: #c9d1d9; text-align: center; line-height: 1.8;">
+                    This isn't just about code—it's about solving a <span class="highlight">real problem</span> with 
+                    <span class="highlight">creativity</span>, <span class="highlight">innovation</span>, and 
+                    <span class="highlight">smart use of AI</span>.
+                </p>
+            </div>
+
             <div class="stats-grid" style="margin: 40px 0;">
                 <div class="stat-box" style="border-left: 6px solid #00ff88;">
-                    <div class="stat-number" style="color: #00ff88;">35/35</div>
-                    <div class="stat-label">⚙️ Technical Execution</div>
+                    <div class="stat-number" style="font-size: 48px; color: #00ff88;">⚡</div>
+                    <div class="stat-label" style="font-size: 18px;">Fast Processing</div>
                 </div>
                 <div class="stat-box" style="border-left: 6px solid #00d9ff;">
-                    <div class="stat-number" style="color: #00d9ff;">35/35</div>
-                    <div class="stat-label">🚀 Functionality & Demo</div>
+                    <div class="stat-number" style="font-size: 48px; color: #00d9ff;">🎨</div>
+                    <div class="stat-label" style="font-size: 18px;">Beautiful Design</div>
                 </div>
                 <div class="stat-box" style="border-left: 6px solid #7f5af0;">
-                    <div class="stat-number" style="color: #7f5af0;">20/20</div>
-                    <div class="stat-label">🎨 UI/UX Design</div>
+                    <div class="stat-number" style="font-size: 48px; color: #7f5af0;">🤖</div>
+                    <div class="stat-label" style="font-size: 18px;">Smart AI Integration</div>
                 </div>
                 <div class="stat-box" style="border-left: 6px solid #ffa500;">
-                    <div class="stat-number" style="color: #ffa500;">10/10</div>
-                    <div class="stat-label">✨ Bonus Features</div>
+                    <div class="stat-number" style="font-size: 48px; color: #ffa500;">💡</div>
+                    <div class="stat-label" style="font-size: 18px;">Creative Features</div>
                 </div>
             </div>
 
-            <div style="background: linear-gradient(135deg, #7f5af0, #00ff88); padding: 50px; border-radius: 20px; box-shadow: 0 15px 50px rgba(127,90,240,0.6);">
-                <h3 style="font-size: 72px; color: #0d1117; font-weight: 900; text-align: center; margin-bottom: 15px;">
-                    100/100
+            <div style="background: linear-gradient(135deg, #7f5af0, #00ff88); padding: 40px; border-radius: 20px; box-shadow: 0 15px 50px rgba(127,90,240,0.6); text-align: center;">
+                <h3 style="font-size: 48px; color: #0d1117; font-weight: 900; margin-bottom: 15px;">
+                    Ready. Set. CODE! 🏆
                 </h3>
-                <p style="font-size: 32px; color: #0d1117; text-align: center; font-weight: 700;">
-                    🏆 PERFECT SCORE ACHIEVED
-                </p>
-            </div>
-
-            <div style="text-align: center; background: rgba(0,255,136,0.1); padding: 30px; border-radius: 12px; border: 3px solid #00ff88; margin-top: 40px;">
-                <h3 style="font-size: 36px; color: #00ff88; margin-bottom: 20px;">🎯 LIVE DEMO TIME!</h3>
-                <p style="font-size: 28px; margin-bottom: 15px;">
-                    <span class="highlight">Demo:</span> localhost:3000 (Running NOW!)
-                </p>
-                <p style="font-size: 24px; color: #c9d1d9;">
-                    <span class="info">Built With:</span> ❤️ + AI + 4 Hours of Hustle
+                <p style="font-size: 28px; color: #0d1117; font-weight: 600;">
+                    Show us what you can build in 4 hours
                 </p>
             </div>
             

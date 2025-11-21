@@ -39,10 +39,12 @@ An intelligent web application that converts test bank documents (images and PDF
    cp .env.example .env
    ```
 
-4. Add your Gemini API key to `.env`:
+4. Add your AI API key to `.env`:
    ```
-   VITE_GEMINI_API_KEY=your_actual_api_key_here
+   VITE_AI_API_KEY=your_actual_api_key_here
    ```
+   
+   > **Note:** The environment variable name may vary based on which AI service you choose to implement.
 
 5. Start the development server:
    ```bash
