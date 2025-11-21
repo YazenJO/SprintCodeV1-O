@@ -1,15 +1,16 @@
 # AI Test Bank Exam Generator
 
-An intelligent web application that converts test bank documents (images and PDFs) into interactive, self-grading exams using Google's Gemini AI.
+An intelligent web application that converts test bank documents (images and PDFs) into interactive, self-grading exams using AI-powered document analysis.
 
 ## ✨ Features
 
 - 📄 **Multiple Format Support**: Accepts both images (JPG, PNG, etc.) and PDF files
-- 🔗 **Google Drive Integration**: Process files directly from Google Drive URLs
-- 🤖 **AI-Powered Analysis**: Uses Google Gemini to extract questions and answers
+- 🤖 **AI-Powered Analysis**: Automatically extracts questions and answers from documents
 - 📝 **Interactive Exams**: Take exams with immediate feedback
-- 📊 **Results Tracking**: See your score and review answers
+- ✅ **Auto-Grading**: Instant scoring and detailed results
+- 📊 **Results Review**: See your score and review correct/incorrect answers
 - 🎨 **Modern UI**: Clean, responsive interface built with React and Tailwind CSS
+- ⚡ **Fast Processing**: Generate exams in under 60 seconds
 
 ## 🚀 Getting Started
 
@@ -17,7 +18,7 @@ An intelligent web application that converts test bank documents (images and PDF
 
 - Node.js (v18 or higher)
 - pnpm (recommended) or npm
-- Google Gemini API key ([Get one here](https://makersuite.google.com/app/apikey))
+- AI API key (you'll need to choose and configure an AI service)
 
 ### Installation
 
@@ -57,19 +58,10 @@ An intelligent web application that converts test bank documents (images and PDF
 
 ## 📖 How to Use
 
-### Using Google Drive Files
-
-1. **Upload** your test bank document (image or PDF) to Google Drive
-2. **Share** the file publicly:
-   - Right-click → Share
-   - Change to "Anyone with the link"
-   - Set to "Viewer" access
-3. **Copy** the share URL
-4. **Paste** the URL in the application
-5. **Click** "Generate Exam"
-6. **Take** the exam and get instant results!
-
-📚 For detailed instructions, see [GOOGLE_DRIVE_SETUP.md](./GOOGLE_DRIVE_SETUP.md)
+1. **Upload** your test bank document (image or PDF)
+2. **Wait** for AI to extract questions (5-60 seconds)
+3. **Take** the interactive exam
+4. **Submit** and get instant results with detailed feedback!
 
 ### Supported File Types
 
@@ -86,16 +78,16 @@ An intelligent web application that converts test bank documents (images and PDF
 ## 🛠️ Tech Stack
 
 ### Frontend
-- **React** - UI framework
+- **React 18** - UI framework
 - **TypeScript** - Type safety
-- **Vite** - Build tool
+- **Vite** - Build tool & dev server
 - **Tailwind CSS** - Styling
 - **Radix UI** - UI components
 - **Wouter** - Routing
 
 ### Backend
 - **Express** - Server framework
-- **Google Gemini AI** - Document analysis
+- **AI Integration** - Document analysis & question extraction
 
 ## 📁 Project Structure
 
@@ -103,18 +95,28 @@ An intelligent web application that converts test bank documents (images and PDF
 ai-test-bank-generator/
 ├── client/
 │   ├── src/
-│   │   ├── api/
-│   │   │   └── geminiClient.ts      # Gemini API integration
-│   │   ├── components/
-│   │   │   ├── UploadForm.tsx       # Google Drive URL input
-│   │   │   ├── Exam.tsx             # Exam interface
-│   │   │   └── Results.tsx          # Results display
-│   │   └── pages/
-│   │       └── Home.tsx             # Main page
+│   │   ├── models/                  # OOP data models
+│   │   │   ├── Question.ts          # Question model with encapsulation
+│   │   │   ├── Exam.ts              # Exam model with composition
+│   │   │   └── ExamResult.ts        # Result calculation model
+│   │   ├── services/                # Business logic layer
+│   │   │   ├── AIService.ts         # Abstract AI service (factory pattern)
+│   │   │   └── ExamService.ts       # Exam orchestration (DI pattern)
+│   │   ├── components/              # UI components
+│   │   │   ├── UploadForm.tsx       # File upload interface
+│   │   │   ├── Exam.tsx             # Interactive exam interface
+│   │   │   ├── Results.tsx          # Results display
+│   │   │   └── ui/                  # Reusable UI components
+│   │   ├── pages/
+│   │   │   └── Home.tsx             # Main page
+│   │   └── lib/
+│   │       └── utils.ts             # Utility functions
 │   └── index.html
 ├── server/
 │   └── index.ts                     # Express server
 ├── .env.example                     # Environment variables template
+├── presentation-hackathon.html      # Competition presentation
+├── evaluation-criteria.html         # Judging criteria
 └── package.json
 ```
 
@@ -122,13 +124,15 @@ ai-test-bank-generator/
 
 ### Environment Variables
 
-- `VITE_GEMINI_API_KEY`: Your Google Gemini API key (required)
+- `VITE_AI_API_KEY`: Your AI service API key (required)
 
-### API Limits
+### API Considerations
 
-The application uses Google Gemini's free tier by default. Be aware of:
+When integrating an AI service, be aware of:
 - Rate limits on API calls
-- File size limits (varies by plan)
+- File size limits (varies by provider and plan)
+- Response time variations
+- Cost considerations (if using paid tiers)
 
 ## 🤝 Contributing
 
@@ -138,31 +142,68 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 This project is licensed under the MIT License.
 
+## 🏗️ Architecture & Design Patterns
+
+This project implements professional software engineering patterns:
+
+- **Service Layer Pattern**: Separation of business logic from UI
+- **Dependency Injection**: Flexible, testable service architecture
+- **Abstract Factory**: Pluggable AI service providers
+- **Model-View Pattern**: Clear separation of data and presentation
+- **Encapsulation**: Private fields with controlled access
+- **Composition**: Building complex objects from simpler ones
+
+See `PROJECT_WORKFLOW.md` for detailed architecture documentation.
+
 ## ⚠️ Important Notes
 
-- Files must be publicly accessible on Google Drive ("Anyone with the link")
-- No files are stored on our servers - everything is processed in real-time
+- No files are stored on servers - everything is processed in real-time
 - Your API key is used locally and never shared
 - Ensure you have permission to use and distribute test bank materials
+- Recommended max file size: 10MB for optimal performance
 
 ## 🐛 Troubleshooting
-
-### "Failed to fetch file from Google Drive"
-- Ensure the file is shared publicly
-- Check that the URL is correct
 
 ### "No questions were found"
 - Verify the document has clear, readable questions
 - Try a higher quality scan or image
 - Ensure text is readable (not blurry or low resolution)
+- Check that questions follow a standard format (numbered with options A, B, C, D)
 
 ### API Errors
-- Check your `VITE_GEMINI_API_KEY` in `.env`
+- Check your `VITE_AI_API_KEY` in `.env`
 - Verify you have API quota available
 - Ensure the API key has proper permissions
+- Check for rate limiting issues
+
+### Slow Processing
+- Large PDFs (50+ pages) may take longer to process
+- Complex layouts or scanned images require more processing time
+- Consider splitting very large documents
+
+### File Upload Issues
+- Ensure file size is under 10MB
+- Supported formats: PDF, PNG, JPG, JPEG, GIF, WebP, BMP
+- Check that the file is not corrupted
+
+## 📚 Documentation
+
+- **PROJECT_WORKFLOW.md** - Complete architecture and workflow documentation
+- **PROJECT_DIFFICULTY_ASSESSMENT.md** - Difficulty analysis for educators
+- **presentation-hackathon.html** - Competition presentation slides
+- **evaluation-criteria.html** - Judging criteria for competitions
+
+## 🎓 For Educators & Competition Organizers
+
+This project is designed as a learning tool and hackathon challenge:
+
+- **Time Estimate**: 4-8 hours for experienced developers
+- **Difficulty Level**: Intermediate to Advanced
+- **Key Learning Outcomes**: OOP, Design Patterns, AI Integration, Full-stack Development
+- **AI Usage**: Students can use AI coding assistants (ChatGPT, Copilot) to help code
 
 ## 📧 Support
 
-If you encounter any issues, please check the [GOOGLE_DRIVE_SETUP.md](./GOOGLE_DRIVE_SETUP.md) guide or open an issue on GitHub.
+If you encounter any issues, please open an issue on GitHub or refer to the documentation files.
 
 
